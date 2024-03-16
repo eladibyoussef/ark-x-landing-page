@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+    box-sizing: border-box;
+    height: 2000px;
+}
+.header-container{
+    /* border: 5px solid white; */
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 70px; 
+    transition: top 1s, opacity 1s; 
+       background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.invisible{
+opacity: 0;
+pointer-events: none;
+}
+#logo{
+    max-width: 200px;
+    max-height: 200px;
+    margin-left: 100px;
+}
+.navBar-container>ul{
+    display: flex;
+    gap: 10px;
+    margin-right: 100px;
+    list-style-type: none;
+
+    /* border: 5px solid white; */
+}
+.navBar-container a{
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+.sign-up-button{
+    border: 1px none #ff4200;
+    background-color: #ff4200;
+    background-image: linear-gradient(90deg , #ff4200 , #fa0);
+    text-align: center;
+    margin-left: 4rem;
+    border-radius: 0.8rem;
+    padding:0.8rem 4rem 0.8rem 4rem;
+    
+}
+#with-video-back {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+    /* width: 100vw; */
+    height: 500px;
+    transition: top 1s, opacity 0.3s;
+
+    
+}
+#with-video-back video {
+    min-width: 100%;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    
+}
+.hero-section{
+    height: 1000px;
+}
