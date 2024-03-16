@@ -9,23 +9,24 @@ window.onscroll = () => {
     let currentScrollTop =  document.documentElement.scrollTop;
     let navbar = document.getElementById("header-container");
     let video = document.getElementById('with-video-back')
-    var opacity = 1 - (currentScrollTop / (document.documentElement.scrollHeight - window.innerHeight));
-    console.log(opacity);
-    console.log(currentScrollTop);
-
-
-    
+    let rocketGif = document.getElementById('rocket-gif')
+    var opacity = 1 - (currentScrollTop / window.innerHeight);
     if (currentScrollTop >0  ) {
         navbar.classList.remove("invisible");
-        video.style.opacity = opacity/3
+        video.style.opacity = opacity/4
+        rocketGif.style.opacity = 1
 
     } else {
         navbar.classList.add("invisible");
         video.style.opacity = opacity
+        rocketGif.style.opacity = opacity/4
+
+
 
     }
 
 }
+
 
 
 

@@ -1,11 +1,12 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 body{
     background-color: black;
     box-sizing: border-box;
-    height: 2000px;
+    /* height: 2000px; */
 }
 .header-container{
     /* border: 5px solid white; */
@@ -29,6 +30,7 @@ pointer-events: none;
     max-height: 200px;
     margin-left: 100px;
 }
+
 .navBar-container>ul{
     display: flex;
     gap: 10px;
@@ -37,6 +39,7 @@ pointer-events: none;
 
     /* border: 5px solid white; */
 }
+
 .navBar-container a{
     color: aliceblue;
     text-decoration: none;
@@ -45,7 +48,6 @@ pointer-events: none;
 }
 .sign-up-button{
     border: 1px none #ff4200;
-    background-color: #ff4200;
     background-image: linear-gradient(90deg , #ff4200 , #fa0);
     text-align: center;
     margin-left: 4rem;
@@ -60,24 +62,140 @@ pointer-events: none;
     left: 0;
     overflow: hidden;
     z-index: -1;
-    /* width: 100vw; */
     height: 500px;
-    transition: top 1s, opacity 0.3s;
+    transition: top 1s, opacity 1s;
+    /* position:relative; */
+    height: 90vh;
+
+    
 
     
 }
 #with-video-back video {
     min-width: 100%;
     min-height: 100vh;
-    width: auto;
-    height: auto;
+    /* width: auto;
+    height: auto; */
     position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 0;
 
     
 }
+.heading-above-video{
+    z-index: 1;
+   
+    -webkit-text-fill-color:transparent;
+    background-image:linear-gradient(90deg,#ff4200,#f9cb28);
+    -webkit-background-clip:text;
+    background-clip:text;
+    position: absolute;
+    font-family: Clashdisplay,sans-serif;
+    font-size: 50px;
+    height: 500px;
+    margin-top: 100px;
+    margin-left: 100px;
+    animation: colorChange 3s infinite alternate linear;
+ 
+
+}
+
+/* set up animation for the h1 */
+@keyframes colorChange {
+    0% { background-image: linear-gradient(90deg,#ff4200,#fcfcfb); 
+         opacity: 1;
+    }
+    50% { background-image: linear-gradient(90deg,#f4f3f0,#ff4200); }
+    100% { background-image: linear-gradient(90deg,#ff4200,#eeede6);
+      opacity: 0.4;
+     }
+  }
+.p-above-video{
+    z-index: 1;
+    position: absolute;
+    margin-left: 100px;
+    top: 62%;
+    font-size: 30px;
+    font-weight: bolder;
+    color: azure;
+    background-color: rgba(52, 51, 51, 0.3);
+    padding: 1rem;
+    border-radius: 0.9rem;
+
+
+
+}
 .hero-section{
-    height: 1000px;
+    height: 100vh;
+    border: 5px solid white;
+    position: relative;
+
+
+}
+.hero-section h1{
+   z-index: 1;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 50px;
+}
+.grid-container{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 50vh 50vh;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-areas: 
+    'area1 text area5'
+    'area2 area3 area4';
+    position: absolute;
+    top: 0;
+    background-image: url(/ressources/space-background.png);
+    background-repeat: no-repeat;
+        background-size: cover;
+
+}
+.grid-container .presentation-text{
+    color: white;
+    grid-area: text;
+    align-self:center;
+    /* border: 5px white solid; */
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 1rem;
+    font-size:large;
+    font-weight: 700;
+    background-color: rgba(73, 72, 72, 0.5);    
+}
+.presentation-text p:last-child img{
+    height: 20px;
+    width: 20px;}
+
+
+#times-letter{
+    position: absolute;
+    font-size: smaller;
+    bottom: 30%;
+    color: #ff4200;
+}
+#rocket-gif{
+    position: absolute;
+    border: none;
+    height: 50px;
+    width: 50px;
+    left: 50%;
+     bottom: 0; 
+     transition: top 1s, opacity 1s; 
+
 }
