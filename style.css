@@ -132,10 +132,7 @@ pointer-events: none;
 }
 .hero-section{
     height: 100vh;
-    border: 5px solid white;
     position: relative;
-
-
 }
 .hero-section h1{
    z-index: 1;
@@ -157,8 +154,8 @@ pointer-events: none;
     top: 0;
     background-image: url(/ressources/space-background.png);
     background-repeat: no-repeat;
-        background-size: cover;
-
+    /* background-size: cover; */
+    background-size: cover ;
 }
 .grid-container .presentation-text{
     color: white;
@@ -180,14 +177,115 @@ pointer-events: none;
 }
 .presentation-text p:last-child img{
     height: 20px;
-    width: 20px;}
+    width: 20px;
+}
+.grid-container .information-cards{
+    background-color: rgba(81, 78, 78, 0.7);
+    margin: 20px; 
+    padding: 10px;
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    transition: border-color 0.3s, transform 0.3s ;
 
 
+}
+.grid-container .information-cards h3 {
+       color: #ff4200;
+       font-size: 30px;
+    }
+.grid-container .information-cards p {
+    color: #e0dedd;
+    font-weight: bold;
+}
+.grid-container .information-cards img{
+    display: block; 
+    width: 100%; 
+    height: 350px; 
+  
+}
+.grid-container .information-cards:hover {
+    border-color: #ff7f50; 
+    transform: scale(1.05); 
+}
+
+
+
+
+.grid-container .information-cards:nth-child(2){
+    grid-area: area1;
+    align-self: center;
+}
+.grid-container .information-cards:nth-child(3){
+    grid-area: area2;
+    align-self: center;
+}
+.grid-container .information-cards:nth-child(4){
+    /* grid-area: area3; */
+    /* border: 5px solid white; */
+    background: none;
+    padding: 0px;
+    overflow: hidden; 
+    opacity: 0.8;
+
+   
+
+}
+.grid-container .information-cards:nth-child(5){
+    grid-area: area4;
+    align-self: center;
+}
+.grid-container .information-cards:nth-child(6){
+    grid-area: area5;
+    align-self: center;
+}
 #times-letter{
     position: absolute;
     font-size: smaller;
     bottom: 30%;
     color: #ff4200;
+}
+
+.courses-section{
+    height: 100vh;
+    background-image: url(/ressources/space-background2.png);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-areas: 
+    'picture text'
+}
+.courses-section img{
+    grid-area: picture;
+    display: block; 
+    width: 100%; 
+    margin-top: 100px;
+    margin-left: 20px;
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+}
+.courses-section div{
+    grid-area: text;
+    font-size: 1.5rem;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #f4f3f0;
+    font-weight: bold;
+}
+.courses-section div button{
+    border: 1px none #ff4200;
+    background-image: linear-gradient(90deg , #ff4200 , #fa0);
+    text-align: center;
+    margin-left: 4rem;
+    border-radius: 0.8rem;
+    padding:0.8rem 4rem 0.8rem 4rem;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.25rem;
+    width: 50%;
+    align-self: center;
 }
 #rocket-gif{
     position: absolute;

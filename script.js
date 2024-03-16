@@ -11,6 +11,7 @@ window.onscroll = () => {
     let video = document.getElementById('with-video-back')
     let rocketGif = document.getElementById('rocket-gif')
     var opacity = 1 - (currentScrollTop / window.innerHeight);
+    console.log(currentScrollTop);
     if (currentScrollTop >0  ) {
         navbar.classList.remove("invisible");
         video.style.opacity = opacity/4
